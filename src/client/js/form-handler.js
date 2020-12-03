@@ -33,7 +33,7 @@ export function handleSubmit(event) {
         show(loader)
 
 
-        fetch('http://localhost:3030/sentiment-analysis', {
+        fetch('/sentiment-analysis', {
             method: 'POST',
             credentials: 'same-origin',
             headers: {
