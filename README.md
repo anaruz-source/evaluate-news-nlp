@@ -9,8 +9,7 @@
 NLPs leverage the machine leaning and deep learning to interpret the human speech. A definition by weekpedia:
 > **Natural language processing** (NLP) is a subfield of linguistics, computer science, and artificial intelligence concerned with the interactions between computers and human language, in particular how to program computers to process and analyze large amounts of natural language data.
 
-In this project, we make use of [Meaning Cloud](www.meaningcloud.com) Text Analytics – MeaningCloud text mining solutions, mainly its **sentiment analysis API**, free trial limited to 20,000 credits
-
+In this project, we make use of [Meaning Cloud](www.meaningcloud.com) Text Analytics – MeaningCloud text mining solutions, mainly its **sentiment analysis API**, free trial limited to 20,000 credits.
 
 > ## Deploying
 

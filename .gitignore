@@ -1,0 +1,5 @@
+node_modules
+dist
+#ignore environment vairables related to the API
+.env
+READEME_B.md
