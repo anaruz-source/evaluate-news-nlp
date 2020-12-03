@@ -3,6 +3,7 @@
 [![build](https://img.shields.io/badge/build-passing-brightgreen)]() 
 
 [![license](https://img.shields.io/badge/licence-MIT-brightgreen)](https://opensource.org/licenses/MIT) 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/972680c4-aac1-4740-8db0-05ee8a5b1b45/deploy-status)](https://app.netlify.com/sites/nlp-for-nd/deploys)
 
 > ## Overview 
 
@@ -45,6 +46,9 @@ all required dependencies for dev and prod are in the package.json
 
 > ## Deploying
 
+visit link below:
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/972680c4-aac1-4740-8db0-05ee8a5b1b45/deploy-status)](https://app.netlify.com/sites/nlp-for-nd/deploys)
 
 A great step to take with your finished project would be to deploy it! Unfortunately its a bit out of scope for me to explain too much about how to do that here, but checkout [Netlify](https://www.netlify.com/) or [Heroku](https://www.heroku.com/) for some really intuitive free hosting options.
 
