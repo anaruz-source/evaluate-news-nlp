@@ -28,9 +28,7 @@ export function handleSubmit(event) {
 
 
        show(loader)
-       console.log(url)
-       console.log('here');
-       console.log("::: Form Submitted :::")
+  
 
 
        fetch('http://localhost:3030/sentiment-analysis', {
@@ -46,7 +44,7 @@ export function handleSubmit(event) {
 
            let result = JSON.parse(res)
 
-           console.log(result)
+          
 
            if (result.status.code != 0) {
 

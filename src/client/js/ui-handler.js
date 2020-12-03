@@ -126,8 +126,6 @@ function updateUI(data) {
 
     anims = document.getElementsByClassName('anim-me'),
 
-    idx = 0,
-
     dataSectionTop = getElmRect(dataSection)
 
     window.scroll(0, dataSectionTop.top)
