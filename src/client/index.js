@@ -1,7 +1,7 @@
-import { extractHostPath, hide, show, removeChildren} from './js/helpers'
-import {updateUI}  from './js/ui-handler.js'
-import { handleSubmit } from './js/form-handler'
-import {animate, addClass} from './js/animation.js'
+import {extractHostPath,hide,show,removeChildren} from './js/helpers'
+import {updateUI} from './js/ui-handler.js'
+import {handleSubmit} from './js/form-handler'
+import {animate,addClass} from './js/animation.js'
 
 import './styles/normalize.scss'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -16,38 +16,36 @@ import img from './images/gui-charts.jpg'
 import spinner from './images/loading-spinner.gif'
 
 
-
 let anims = document.getElementsByClassName('anim-me'),
 
-idx = 0
+    idx = 0
 
 hide(document.getElementById('error'))
 
-for(; idx < anims.length; ) {
+for (; idx < anims.length;) {
 
-   
-    if( idx % 2 == 0){ //alternating between odd and even number for index, used to alternate anim classNames usage
 
-        animate(anims[idx],'fadein-direction-left')
+    if (idx % 2 == 0) { //alternating between odd and even number for index, used to alternate anim classNames usage
 
-    }else {
+        animate(anims[idx], 'fadein-direction-left')
+
+    } else {
 
         animate(anims[idx], 'fadein-direction-right')
     }
-   
+
     idx++
-    
+
 }
 
-document.addEventListener('scroll', function(e){
+document.addEventListener('scroll', function (e) {
 
-   let idx = 0,
+    let idx = 0,
 
-   anims = document.getElementsByClassName('anim-me')
+        anims = document.getElementsByClassName('anim-me')
 
-  
-  
-   for (; idx < anims.length;) {
+
+    for (; idx < anims.length;) {
 
 
         if (anims[idx].className.indexOf('fadein') > -1) { //not already animated onloading(not having animation className)

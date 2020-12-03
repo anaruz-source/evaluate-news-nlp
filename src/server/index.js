@@ -39,31 +39,29 @@ app.listen(3030, function () {
 })
 
 
-app.post('/sentiment-analysis', function(req, resp){
+app.post('/sentiment-analysis', function (req, resp) {
 
     const opts1 = {
         'method': 'GET',
         'hostname': req.body.url.hostname,
         'path': req.body.url.path,
-        'headers': {
-        },
+        'headers': {},
         'maxRedirects': 20
     }
-   
+
 
     const opts2 = {
         'method': 'POST',
         'hostname': 'api.meaningcloud.com',
         'path': '/sentiment-2.1',
-        'headers': {
-        },
+        'headers': {},
         'maxRedirects': 20
     };
-  
+
 
     //resp.json(JSON.stringify({model: "general_en", score_tag: "N+", agreement: "DISAGREEMENT", subjectivity: "SUBJECTIVE", agreement: "DISAGREEMENT", confidence: "60", irony: "IRONIC"}))
 
-     makeServerRequest(req, resp, opts1, opts2)
+    makeServerRequest(req, resp, opts1, opts2)
 
-   
+
 })

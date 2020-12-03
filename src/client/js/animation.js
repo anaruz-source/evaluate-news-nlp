@@ -2,21 +2,21 @@
 ////
 let docElm = document.documentElement,
 
-addClass = function (className) { // Using  declaration function/function expression because, arrow functions resolve 'this'  to enclosing lexical scope
-    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
-    // changing function's scope
+    addClass = function (className) { // Using  declaration function/function expression because, arrow functions resolve 'this'  to enclosing lexical scope
+        // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+        // changing function's scope
 
-    let classList = this.className ? this.className : '';
+        let classList = this.className ? this.className : '';
 
-    if (classList.indexOf(className) === -1) {
+        if (classList.indexOf(className) === -1) {
 
-        classList += ' ' + className;
+            classList += ' ' + className;
 
-        this.className = classList.trim();
+            this.className = classList.trim();
 
 
-    }
-},
+        }
+    },
 
     removeClass = function (className) { // Using  declaration function/Function Expression  because, arrow functions resolve 'this'  to enclosing lexical scope
         // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
@@ -49,7 +49,7 @@ addClass = function (className) { // Using  declaration function/function expres
 
     // this adjustement are added for the sake of collapsing part
 
-    getComputedHeight = (elm, adjust) => {  // we can use default parameter 'adjust = false', for the sake of backward compatibility we don't! 
+    getComputedHeight = (elm, adjust) => { // we can use default parameter 'adjust = false', for the sake of backward compatibility we don't! 
         //it resolves to undefined which is == false
 
         // in case of box-sizing: border-box, element could be adjust with extrat height, margin never added
@@ -74,7 +74,6 @@ addClass = function (className) { // Using  declaration function/function expres
 
             adjustement += parseFloat(computed.marginTop) + parseFloat(computed.marginBottom) // margin not included in both box models
         }
-
 
 
         return parseFloat(computed.height) + adjustement;
@@ -109,7 +108,6 @@ addClass = function (className) { // Using  declaration function/function expres
     // Scroll to anchor ID using scrollTO event
 
 
-
     // Inspired by https://medium.com/talk-like/detecting-if-an-element-is-in-the-viewport-jquery-a6a4405a3ea2
     // code adapted to my special use
     isLoadedInViewport = (elm) => {
@@ -131,21 +129,24 @@ addClass = function (className) { // Using  declaration function/function expres
             };
 
 
-
         return winCoors.top <= elmCoors.top && winCoors.bttm + elmHeight / 2 >= elmCoors.bttm || // element loaded in the viewport, or its half is visible
 
-            winCoors.top < elmCoors.bttm && winCoors.top > elmCoors.top;  // a part of element is still visible in the viewport
+            winCoors.top < elmCoors.bttm && winCoors.top > elmCoors.top; // a part of element is still visible in the viewport
 
     },
 
 
-    animate = (elem, className)=>{
+    animate = (elem, className) => {
 
-      if(isLoadedInViewport(elem)){
+        if (isLoadedInViewport(elem)) {
 
-        addClass.call(elem, className)
-      }
+            addClass.call(elem, className)
+        }
     }
 
 
-    export {animate, getElmRect, addClass}
+export {
+    animate,
+    getElmRect,
+    addClass
+}

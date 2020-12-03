@@ -1,48 +1,45 @@
 header {
-  height: 5em;
-  
-
-  background: white;
-  
-  .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 1px 1px rgba(19, 117, 227, 0.04);
-    border-bottom: 1px solid rgba(19, 117, 227, 0.05);
     height: 5em;
 
+    background: white;
 
-    .logo {
-      height: 4em;
-   
-      border-radius: 6px;
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 1px 1px rgba(19, 117, 227, 0.04);
+        border-bottom: 1px solid rgba(19, 117, 227, 0.05);
+        height: 5em;
 
-      img {
-        height: 4em;
-      }
-    }
+        .logo {
+            height: 4em;
 
-    .navigation {
-      display: flex;
-      justify-content: space-around;
+            border-radius: 6px;
 
-      div {
-    width: 5em;
-    background: rgba(0, 0, 0, 0);
-    height: 2.5em;
-    padding: 0.5em;
-    position: relative;
-
-        &:first-child {
-          border-right: 1px solid rgba(0, 0, 0, 0.04);
+            img {
+                height: 4em;
+            }
         }
 
-        &:hover {
-           color:#20b2aa;;
-     
+        .navigation {
+            display: flex;
+            justify-content: space-around;
+
+            div {
+                width: 5em;
+                background: rgba(0, 0, 0, 0);
+                height: 2.5em;
+                padding: 0.5em;
+                position: relative;
+
+                &:first-child {
+                    border-right: 1px solid rgba(0, 0, 0, 0.04);
+                }
+
+                &:hover {
+                    color: #20b2aa;
+                }
+            }
         }
-      }
     }
-  }
 }

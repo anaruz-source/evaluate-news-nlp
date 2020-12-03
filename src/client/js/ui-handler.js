@@ -1,8 +1,21 @@
-import { drawLineChart, drawScatterChart, drawPieDoughnutChart } from './charts-ploting.js'
+import {
+    drawLineChart,
+    drawScatterChart,
+    drawPieDoughnutChart
+} from './charts-ploting.js'
 
-import {flattenData, hide, show, removeChildren, destroyActiveChartInstances} from './helpers'
+import {
+    flattenData,
+    hide,
+    show,
+    removeChildren,
+    destroyActiveChartInstances
+} from './helpers'
 
-import { animate, getElmRect } from './animation.js'
+import {
+    animate,
+    getElmRect
+} from './animation.js'
 
 function updateUI(data) {
 
@@ -35,23 +48,22 @@ function updateUI(data) {
 
 
         errElm = document.getElementById('error')
-  
-    
-   hide(errElm)
 
-   show(loader)
 
-   destroyActiveChartInstances() // destroy chart instances if any
-    
-  let  clonedNode = summary.firstElementChild.cloneNode(true) //make a copy of the 1st child before deleting everything
-         
-        removeChildren(summary) // we make sure that there're no elements from previous execution
+    hide(errElm)
 
-        console.log(summary)
-    
+    show(loader)
+
+    destroyActiveChartInstances() // destroy chart instances if any
+
+    let clonedNode = summary.firstElementChild.cloneNode(true) //make a copy of the 1st child before deleting everything
+
+    removeChildren(summary) // we make sure that there're no elements from previous execution
+
+    console.log(summary)
+
 
     for (let e in data) {
-
 
 
         let className,
@@ -61,7 +73,7 @@ function updateUI(data) {
 
             if (e == 'score_tag') {
 
-                     className = outputToCssClass.score_tags[data[e]][1],
+                className = outputToCssClass.score_tags[data[e]][1],
                     textContent = outputToCssClass.score_tags[data[e]][0] + `(${data[e]})`
 
             } else if (e == 'confidence') {
@@ -92,60 +104,66 @@ function updateUI(data) {
             }
 
 
+            let cloned = clonedNode.cloneNode(true)
 
-       
-
-                let cloned = clonedNode.cloneNode(true)
-
-                show(cloned)
-
-            
-
-                cloned.firstElementChild.classList.add(className)
+            show(cloned)
 
 
-                cloned.firstElementChild.textContent = e
+            cloned.firstElementChild.classList.add(className)
 
-                cloned.lastElementChild.textContent = textContent
 
-                summary.appendChild(cloned)
+            cloned.firstElementChild.textContent = e
 
-            
+            cloned.lastElementChild.textContent = textContent
+
+            summary.appendChild(cloned)
 
 
         }
 
-    
+
     }
-   
+
     show(dataSection)
 
     show(charts)
 
     let flattend = flattenData(data),
 
-    anims = document.getElementsByClassName('anim-me'),
+        anims = document.getElementsByClassName('anim-me'),
 
-    dataSectionTop = getElmRect(dataSection)
+        dataSectionTop = getElmRect(dataSection)
 
     window.scroll(0, dataSectionTop.top)
 
-    
+
     hide(loader)
 
-    
 
-   
+    drawScatterChart({
+        datasets: flattend.polarity_datasets,
+        polarity_array: flattend.polarity_array,
+        patterns: flattend.patterns
+    }, 'ct-chart-scatter', outputToCssClass)
 
-    drawScatterChart({ datasets: flattend.polarity_datasets, polarity_array: flattend.polarity_array, patterns: flattend.patterns }, 'ct-chart-scatter', outputToCssClass)
-    
-    drawLineChart({ data: flattend.confidence, indices: flattend.indices, fill: flattend.patterns.fill, stroke: flattend.patterns.stroke }, 'ct-chart-line-conf', 'Confidence evolution along the text (top to bottom)', { fill: 'rgba(255, 0, 0, .2)', stroke: 'rgba(255, 0, 0, 1)' })
-    
-    drawPieDoughnutChart({ data: flattend.agreement }, 'ct-chart-line-agr', 'Agreement evolution along the text (top to bottom)')
+    drawLineChart({
+        data: flattend.confidence,
+        indices: flattend.indices,
+        fill: flattend.patterns.fill,
+        stroke: flattend.patterns.stroke
+    }, 'ct-chart-line-conf', 'Confidence evolution along the text (top to bottom)', {
+        fill: 'rgba(255, 0, 0, .2)',
+        stroke: 'rgba(255, 0, 0, 1)'
+    })
 
+    drawPieDoughnutChart({
+        data: flattend.agreement
+    }, 'ct-chart-line-agr', 'Agreement evolution along the text (top to bottom)')
 
 
 }
 
 
-export {updateUI}
+export {
+    updateUI
+}

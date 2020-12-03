@@ -19,18 +19,14 @@
 </head>
 
 <body>
-
-
-            <div id="loader" class="text-center d-none relay">
-                <div class="d-flex flex-column justify-content-center align-items-center">
-                    <div>
-                                        <img src="images/loading-spinner.gif" alt="">
-                                        <span>Loading</span>
-                    </div>
-
-                </div>
-            
+    <div id="loader" class="text-center d-none relay">
+        <div class="d-flex flex-column justify-content-center align-items-center">
+            <div>
+                <img src="images/loading-spinner.gif" alt="">
+                <span>Loading</span>
             </div>
+        </div>
+    </div>
     <header>
         <div class="header-container">
             <div class="logo">
@@ -46,12 +42,12 @@
     <main>
         <section class="container">
             <div class="form-container d-flex row align-items-center">
-                        <div class="form-image col col-sm-12 col-lg-6 anim-me">
-                            <div class="anim-me">App based on meaningcloud</div>
-                            <div class="anim-me">Enter the website's page url to Analyse</div>
-                        </div>
-                <form method="POST" class="col col-sm-12  col-lg-6 anim-me" onsubmit="return Client.handleSubmit(event)">
-         
+                <div class="form-image col col-sm-12 col-lg-6 anim-me">
+                    <div class="anim-me">App based on meaningcloud</div>
+                    <div class="anim-me">Enter the website's page url to Analyse</div>
+                </div>
+                <form method="POST" class="col col-sm-12  col-lg-6 anim-me"
+                    onsubmit="return Client.handleSubmit(event)">
                     <div class="inputs">
                         <div class="row">
                             <label for="url" class="col col-4 text-white">Page's url</label><input id="url" type="text"
@@ -93,14 +89,13 @@
                 </form>
             </div>
         </section>
-        <section class="error container"><div id="error"></div></section>
+        <section class="error container">
+            <div id="error"></div>
+        </section>
         <section class="bg-white data d-none container">
-            
             <h4 class="text-left anim-me">Text analysis summary</h4>
-            
             <div class="d-flex flex-column  bg-summary">
                 <div class="card-custom">
-                  
                     <div class="card-body text-white row  justify-content-around anim-me" id="summary">
                         <div class="card d-none">
                             <div class="card-header"></div>
@@ -109,41 +104,34 @@
                     </div>
                 </div>
             </div>
-
             <h4 class="text-left  anim-me">Charts</h4>
-
             <div class="charts-container">
-               
-                   
-                
-            <div class="d-flex flex-column align-items-center">
-                <div class="card-custom b  anim-me">
-        
-                    <div id="charts" class="card-body d-none">
-                        <div class="d-flex align-items-center justify-content-center flex-wrap">
-                            <div class="anim-me chart">
-                                <h5>Scattering of polarity evolution</h5>
-                                <canvas id="ct-chart-scatter"></canvas>
-                            </div>
-                            <div class="anim-me chart">
-                                <h5>Confidence evolution</h5>
-                                <canvas id="ct-chart-line-conf"></canvas>
-                            </div>
-                            <div class="anim-me chart">
-                                <h5>Agreement/Disagreement pourcent(%)</h5>
-                                <canvas id="ct-chart-line-agr"></canvas>
+                <div class="d-flex flex-column align-items-center">
+                    <div class="card-custom b  anim-me">
+                        <div id="charts" class="card-body d-none">
+                            <div class="d-flex align-items-center justify-content-center flex-wrap">
+                                <div class="anim-me chart">
+                                    <h5>Scattering of polarity evolution</h5>
+                                    <canvas id="ct-chart-scatter"></canvas>
+                                </div>
+                                <div class="anim-me chart">
+                                    <h5>Confidence evolution</h5>
+                                    <canvas id="ct-chart-line-conf"></canvas>
+                                </div>
+                                <div class="anim-me chart">
+                                    <h5>Agreement/Disagreement pourcent(%)</h5>
+                                    <canvas id="ct-chart-line-agr"></canvas>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
         </section>
     </main>
     <footer class="d-flex justify-content-center align-items-center text-dark">
         <p>NLP. Natural Language Processing &copy; 2020</p>
     </footer>
-
     <script>
         // Check that service workers are supported
         if ('serviceWorker' in navigator) {
@@ -153,7 +141,6 @@
             });
         }
     </script>
-
 </body>
 
 </html>

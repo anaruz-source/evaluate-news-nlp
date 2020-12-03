@@ -1,13 +1,14 @@
 import Chart from 'chart.js'
 
-import {count} from './helpers'
+import {
+    count
+} from './helpers'
 
 
 // Draw chart functions
 // Stacked line charts with JS => codepen/chartjs
 // https://codepen.io/natenorberg/pen/WwqRar
 //https://www.chartjs.org/docs/latest/
-
 
 
 function drawScatterChart(options, selector, oToCSS) {
@@ -61,11 +62,11 @@ function drawScatterChart(options, selector, oToCSS) {
                         type: 'linear',
                         position: 'bottom',
 
-                            scaleLabel: {
-                                display: true,
-                                labelString: 'Pos in txt'
-                            }
-                    
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Pos in txt'
+                        }
+
                     }]
                 },
                 animation: {
@@ -97,7 +98,6 @@ function drawLineChart(options, selector, label) {
     const canvas = document.getElementById(selector)
     const ctx = canvas.getContext("2d")
 
-   
 
     const myChart = new Chart(ctx, {
         type: 'line',
@@ -114,15 +114,15 @@ function drawLineChart(options, selector, label) {
                 data: options.data
             }],
             options: {
-                legend:{
-                    display:false
+                legend: {
+                    display: false
                 },
                 responsive: true,
                 maintainAspectRatio: false,
                 // Can't just `stacked: true` like the docs say
                 scales: {
                     yAxes: [{
-                        stacked: true,  
+                        stacked: true,
                         ticks: {
                             beginAtZero: false,
                             max: 100,
@@ -140,7 +140,8 @@ function drawLineChart(options, selector, label) {
                         scaleLabel: {
                             display: true,
                             labelString: 'Pos in txt'
-                        }}]
+                        }
+                    }]
                 },
                 animation: {
                     duration: 750,
@@ -160,9 +161,9 @@ function drawLineChart(options, selector, label) {
     });
     // added because height and width of chart increase strangely!
 
-    
+
     canvas.setAttribute('style', 'height:100%;width:100%');
-    
+
 
 };
 
@@ -172,7 +173,6 @@ function drawPieDoughnutChart(options, selector, label, colors) {
 
     const canvas = document.getElementById(selector)
     const ctx = canvas.getContext("2d")
-
 
 
     const myChart = new Chart(ctx, {
@@ -207,13 +207,17 @@ function drawPieDoughnutChart(options, selector, label, colors) {
         }
 
     });
-   
+
     // added because height and width of chart increase strangely!
 
-   
+
     canvas.setAttribute('style', 'height:100%;width:100%');
 
 };
 
 
-export {drawLineChart, drawScatterChart, drawPieDoughnutChart}
+export {
+    drawLineChart,
+    drawScatterChart,
+    drawPieDoughnutChart
+}
