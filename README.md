@@ -48,10 +48,10 @@ The goal of this project is to give you practice with:
 
 A great step to take with your finished project would be to deploy it! Unfortunately its a bit out of scope for me to explain too much about how to do that here, but checkout [Netlify](https://www.netlify.com/) or [Heroku](https://www.heroku.com/) for some really intuitive free hosting options.
 
-## License
+> ## License
 [MIT License](https://opensource.org/licenses/MIT)
 
-## References
+> ## References
 1. [Udacity frontend nanodegree program](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd0011)
 
 2. [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
