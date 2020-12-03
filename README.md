@@ -41,7 +41,7 @@ The goal of this project is to give you practice with:
  npm run test
 
  ```
- > ![autocompletion](https://github.com/anaruz-source/evaluate-news-nlp/blob/master/src/client/images/jest-results.png?raw=true)
+ > ![jest test resuls](https://github.com/anaruz-source/evaluate-news-nlp/blob/master/src/client/images/jest-results.png?raw=true)
 
 > ## Deploying
 
