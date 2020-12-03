@@ -3,7 +3,7 @@
 [![build](https://img.shields.io/badge/build-passing-brightgreen)]() 
 
 [![license](https://img.shields.io/badge/licence-MIT-brightgreen)](https://opensource.org/licenses/MIT) 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/972680c4-aac1-4740-8db0-05ee8a5b1b45/deploy-status)](https://app.netlify.com/sites/nlp-for-nd/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1e3aa423-5ddf-4abf-803d-3a6262ba2bef/deploy-status)](https://app.netlify.com/sites/nlp-udacity-nd/deploys)
 
 > ## Overview 
 

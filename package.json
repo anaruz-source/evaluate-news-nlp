@@ -21,6 +21,7 @@
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "follow-redirects": "^1.13.0",
     "formdata-node": "^2.4.0",
     "string-strip-html": "^6.3.0",
     "webpack": "^4.43.0",
