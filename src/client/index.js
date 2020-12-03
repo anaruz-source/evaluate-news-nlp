@@ -12,7 +12,7 @@ import './styles/header.scss'
 
 
 import logo from './images/nlp.svg'
-import img from './images/sentiment-analysis.svg'
+import img from './images/gui-charts.jpg'
 import spinner from './images/loading-spinner.gif'
 
 

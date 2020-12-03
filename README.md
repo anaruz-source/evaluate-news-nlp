@@ -31,7 +31,7 @@ The goal of this project is to give you practice with:
  
  ```
  
-> all required dependencies for dev and prod are in the package.json
+all required dependencies for dev and prod are in the package.json
 
  >## testing
 
