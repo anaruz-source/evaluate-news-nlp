@@ -25,12 +25,6 @@ hide(document.getElementById('error'))
 
 for(; idx < anims.length; ) {
 
-    if(anims[idx].nodeName.toLocaleLowerCase() === 'section'){
-
-        animate(anims[idx], 'fadein-direction-top')
-
-        idx++
-    } 
    
     if( idx % 2 == 0){ //alternating between odd and even number for index, used to alternate anim classNames usage
 
