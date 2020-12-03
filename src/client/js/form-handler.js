@@ -64,6 +64,7 @@ export function handleSubmit(event) {
            errElm.innerHTML = err
 
            hide(loader)
+           show(errElm)
         
 
        })
