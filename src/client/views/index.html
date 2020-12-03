@@ -1,43 +1,159 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>Test</title>
-        <link rel="stylesheet" href="/styles/resets.css">
-        <link rel="stylesheet" href="/styles/base.css">
-        <link rel="stylesheet" href="/styles/header.css">
-        <link rel="stylesheet" href="/styles/form.css">
-        <link rel="stylesheet" href="/styles/footer.css">
-    </head>
 
-    <body>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Natural Language Processing Application based on MeaningCloud</title>
+    <link rel="stylesheet" href="/styles/resets.css">
+    <link rel="stylesheet" href="/styles/base.css">
+    <link rel="stylesheet" href="/styles/header.css">
+    <link rel="stylesheet" href="/styles/form.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Varela&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+</head>
 
-        <header>
-            <div class="">
-                Logo
+<body>
+
+
+            <div id="loader" class="text-center d-none relay">
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <div>
+                                        <img src="images/loading-spinner.gif" alt="">
+                                        <span>Loading</span>
+                    </div>
+
+                </div>
+            
             </div>
-            <div class="">
-                navigation
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/nlp.svg" alt="">
             </div>
-        </header>
-
-        <main>
-            <section>
-                <form class="" onsubmit="return handleSubmit(event)">
-                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
-                    <input type="submit" name="" value="submit" onclick="return handleSubmit(event)" onsubmit="return handleSubmit(event)">
+            <div class="navigation">
+                <div>Blog</div>
+                <div>Signin</div>
+                <div>Signup</div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="container">
+            <div class="form-container d-flex row align-items-center">
+                        <div class="form-image col col-sm-12 col-lg-6 anim-me">
+                            <div class="anim-me">App based on meaningcloud</div>
+                            <div class="anim-me">Enter the website's page url to Analyse</div>
+                        </div>
+                <form method="POST" class="col col-sm-12  col-lg-6 anim-me" onsubmit="return Client.handleSubmit(event)">
+         
+                    <div class="inputs">
+                        <div class="row">
+                            <label for="url" class="col col-4 text-white">Page's url</label><input id="url" type="text"
+                                name="input" value="" placeholder="Website page" class="col col-8">
+                        </div>
+                        <div class="row">
+                            <label for="lang" class="col col-4  text-white">Language</label>
+                            <select id="lang" name=" lang" placeholder="Website page" class="col col-8">
+                                <option value="auto">Detect</option>
+                                <option value="en">English</option>
+                                <option value="es">Spanish</option>
+                                <option value="fr">French</option>
+                                <option value="it">Italian</option>
+                                <option value="pt">Protuguese</option>
+                                <option value="ca">Catalan</option>
+                                <option value="da">Danish</option>
+                                <option value="sv">Swedish</option>
+                                <option value="no">Norvegian</option>
+                                <option value="fi">Finnish</option>
+                            </select>
+                        </div>
+                        <div class="row">
+                            <label for="mod" class="col col-4  text-white">Model</label>
+                            <select id="mod" class="col col-8">
+                                <option value="general">Generic Model(Default)</option>
+                            </select>
+                        </div>
+                        <div class="row">
+                            <label for="verb" class="col col-10  text-white">Verbose</label>
+                            <input id="verb" type="checkbox" name="input" value="" placeholder="Website page"
+                                class="col col-2" checked>
+                        </div>
+                        <div class="controls">
+                            <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)"
+                                onsubmit="return Client.handleSubmit(event)">
+                            <input type="reset" name="" value="reset">
+                        </div>
+                    </div>
                 </form>
-            <section>
+            </div>
+        </section>
+        <section class="error container"><div id="error"></div></section>
+        <section class="bg-white data d-none container">
+            
+            <h4 class="text-left text-light anim-me">Text analysis summary</h4>
+            
+            <div class="d-flex flex-column  bg-summary">
+                <div class="card-custom">
+                  
+                    <div class="card-body text-white row  justify-content-around anim-me" id="summary">
+                        <div class="card d-none">
+                            <div class="card-header"></div>
+                            <div class="card-body text-dark text-center"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-            <section>
-                <strong>Form Results:</strong>
-                <div id="results"></div>
-            </section>
-        </main>
+            <h4 class="text-left text-light anim-me">Charts</h4>
 
-        <footer>
-            <p>This is a footer</p>
-        </footer>
+            <div class="charts-container">
+               
+                   
+                
+            <div class="d-flex flex-column align-items-center">
+                <div class="card-custom b  anim-me">
+        
+                    <div id="charts" class="card-body d-none">
+                        <div class="d-flex align-items-center justify-content-center flex-wrap">
+                            <div class="anim-me chart">
+                                <h5>Scattering of polarity evolution</h5>
+                                <canvas id="ct-chart-scatter"></canvas>
+                            </div>
+                            <div class="anim-me chart">
+                                <h5>Confidence evolution</h5>
+                                <canvas id="ct-chart-line-conf"></canvas>
+                            </div>
+                            <div class="anim-me chart">
+                                <h5>Agreement/Disagreement pourcent(%)</h5>
+                                <canvas id="ct-chart-line-agr"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+    </main>
+    <footer class="d-flex justify-content-center align-items-center text-dark">
+        <p>NLP. Natural Language Processing &copy; 2020</p>
+    </footer>
 
-    </body>
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script>
+
+</body>
+
 </html>

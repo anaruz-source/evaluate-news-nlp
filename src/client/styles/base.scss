@@ -1,0 +1,292 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: white;
+    font-family: 'PT Sans','Audiowide', 'Varela', sans-serif;
+    font-size: 1em;
+    position: relative;
+
+}
+
+main {
+    flex: 2;
+    position: relative;
+}
+
+
+section {
+    margin: 0 auto;
+    min-width: 320px;
+}
+
+.relay{
+
+    background: rgba(0, 0, 0, 0.521);
+    color: white;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top:0;
+    bottom: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 10;
+
+    img{
+        height: 2em;
+        width: 2em;
+    }
+
+    div{
+        width: 100vw;
+        height: 100vh;
+
+        div{
+            height: 4em;
+        }
+    }
+}
+
+section.data {
+   
+    .container {
+
+          padding: 2em 0;
+
+          background: white;
+    }
+    .bg-summary{
+
+     background: #f0f8ff;
+     height: 12em;
+     padding: 2em 0;
+     margin-bottom: 2em;
+         border-radius: 6px;
+
+    box-shadow: 0 1px 1px rgba(0,0,0, 0.05);
+    border: 1px solid rgba(0,0,0,0.04);
+      
+  }
+
+  .charts-container{
+
+    background: #f0f8ff;
+    border-radius: 6px;
+
+    box-shadow: 0 1px 1px rgba(0,0,0, 0.05);
+    border: 1px solid rgba(0,0,0,0.04);
+    margin-bottom: 2em;
+      
+  }
+
+
+
+    .card-custom {
+
+  
+
+        .card-header {
+
+            text-transform: uppercase;
+            font-weight: bold;
+            padding: 0.2em 0.5em;
+            border: none;
+            background: none;
+            color: #fa8072;
+            font-weight: normal;
+            font-size: 1em;
+            margin: .5em 0;
+        }
+
+
+    .card-body{
+
+    padding: 1.25em 0;
+    .card {
+       margin: .2em .4em;
+       font-size: .6em;
+       font-weight: normal;
+
+     padding: 0 .5em;
+        .card-header {
+
+            text-transform: uppercase;
+            font-weight: bold;
+            padding: 0.2em 0.5em;
+            border: none;
+            background: none;
+            margin: 0;
+            position: relative;
+            top: -0.5em;
+        }
+
+        .card-body {
+            
+                padding: 0.2em 0;
+
+                text-transform: uppercase;
+
+                font-size: 0.9em;
+                
+                font-weight: bold;
+                
+                
+
+        }
+        }
+
+    
+
+
+    }
+     
+
+    #charts {
+
+            padding-top: 0
+        }
+
+
+  .chart {
+
+    background: transparent;
+    margin: .5em 0;
+    background:white;
+    opacity: 0;
+    border-radius: 10px;
+    
+ 
+  }
+
+
+  h5 {
+
+            text-transform: uppercase;
+            padding: 0.2em 0;
+            border: none;
+            background: none;
+            font-weight: normal;
+            font-size: 1em;
+            margin: .5em 0;
+            color: #fa8072;
+  }
+
+
+
+canvas {
+    height: 200px;
+}
+ }
+}
+
+#error {
+
+    border: 2px solid red;
+    background: rgba(255, 0, 0, 0.3);
+    color: darkred
+}
+
+  .row {
+
+     margin-left: 0;
+     margin-right: 0;
+  }
+
+// animation: https://thoughtbot.com/blog/sasss-content-directive
+
+// https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion
+
+@mixin keyframe($name) {
+
+    @keyframes #{$name} {
+        
+    //@content to be replace by the content to be written later on inside the keyframes 
+       
+       @content  
+        
+    }
+    
+}
+
+
+@mixin createAnim($anim) {
+
+    animation: $anim
+    
+    
+}
+
+@mixin transformFunc($type) {
+    
+    transform: #{$type}
+}
+
+.fadein-direction-left{
+    opacity: 1!important;
+    @include createAnim(fadein-direction-left 2s ease-in .5s)
+}
+
+
+.fadein-direction-right{
+
+   opacity: 1!important;
+
+    @include createAnim(fadein-direction-right 2s ease-in .5s)
+    
+}
+
+.fadein-direction-top {
+      opacity: 1!important;
+    @include createAnim(fadein-drection-top 2s ease-in .05s)
+}
+
+
+@include keyframe(fadein-direction-left){
+
+    from { opacity: 0;
+    
+         @include transformFunc('translateX(-100%)'); 
+         @include transformFunc('scale(200%)'); // scaling while translating through X axis
+    }
+
+    to { opacity: 1;
+    
+         @include transformFunc('translateX(0)');
+         @include transformFunc('scale(100%)')
+    }
+}
+
+@include keyframe(fadein-direction-right){
+
+    from { opacity: 0;
+    
+          @include transformFunc('translateX(100%)');
+          @include transformFunc('scale(200%)');
+    }
+
+    to { opacity: 1;
+    
+          @include transformFunc('translateX(0)');
+          @include transformFunc('scale(100%)');
+    }
+}
+
+
+@include keyframe(fadein-direction-top){
+
+    from { opacity: 0;
+    
+          @include transformFunc('translateY(100%)');
+          @include transformFunc('scale(200%)');
+    }
+
+    to { opacity: 1;
+    
+          @include transformFunc('translateY(0)');
+          @include transformFunc('scale(100%)');
+    }
+}
