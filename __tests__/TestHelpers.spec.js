@@ -1,4 +1,5 @@
 //https://www.valentinog.com/blog/jes
+
 import { extractHostPath } from '../src/client/js/helpers.js'
 
 
@@ -42,7 +43,7 @@ describe('testing Fomatting function functionality', () => {
 
         }).catch(function (error) {
 
-            console.log(error)
+           
         })
 
 
