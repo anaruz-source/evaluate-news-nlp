@@ -1,8 +1,4 @@
-import {
-    hide,
-    show,
-    updateUI
-} from "./helpers"
+import {hide,show,updateUI} from "./helpers"
 
 export function handleSubmit(event) {
     event.preventDefault()
