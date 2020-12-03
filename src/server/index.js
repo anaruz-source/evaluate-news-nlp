@@ -34,7 +34,7 @@ app.get('/', function (req, res) {
 
 
 // designates what port the app will listen to for incoming requests
-app.listen(3030, function () {
+app.listen(process.env.PORT || 3030, function () {
     console.log('Example app listening on port 3030!')
 })
 
