@@ -3,7 +3,7 @@
 [![build](https://img.shields.io/badge/build-passing-brightgreen)]() 
 
 [![license](https://img.shields.io/badge/licence-MIT-brightgreen)](https://opensource.org/licenses/MIT) 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/1e3aa423-5ddf-4abf-803d-3a6262ba2bef/deploy-status)](https://app.netlify.com/sites/nlp-udacity-nd/deploys)
+
 
 > ## Overview 
 
@@ -71,6 +71,4 @@ A great step to take with your finished project would be to deploy it! Unfortuna
 
 10. [bootstrap docs](https://getbootstrap.com/docs/4.4/layout/overview/)
 11. [bootstrap concepts](https://webpack.js.org/concepts/)
-12. [Netlify express](https://github.com/owenconti/netlify-express/blob/master/package.json)
-12. [Netlify express](https://www.youtube.com/watch?v=hQAu0YEIF0g)
 
