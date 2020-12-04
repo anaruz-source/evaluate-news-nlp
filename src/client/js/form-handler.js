@@ -57,7 +57,7 @@ export function handleSubmit(event) {
         }).catch(function (err) {
 
 
-            console.log(err)
+          
 
             errElm.innerHTML = err
 

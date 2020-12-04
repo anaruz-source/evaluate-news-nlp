@@ -170,7 +170,6 @@ function count(element) {
 
     this.forEach(function (e) {
 
-        console.log(e)
         if (element == e) counter++
 
     })

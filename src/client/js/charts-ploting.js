@@ -33,7 +33,6 @@ function drawScatterChart(options, selector, oToCSS) {
         })
     }
 
-    console.log('ds', datasets)
 
     const myChart = new Chart(ctx, {
         type: 'scatter',

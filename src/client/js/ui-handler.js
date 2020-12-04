@@ -60,8 +60,6 @@ function updateUI(data) {
 
     removeChildren(summary) // we make sure that there're no elements from previous execution
 
-    console.log(summary)
-
 
     for (let e in data) {
 
