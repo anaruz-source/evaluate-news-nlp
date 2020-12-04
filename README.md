@@ -18,7 +18,7 @@ The goal of this project is to give you practice with:
 - Webpack Loaders and Plugins
 - Creating layouts and page design ( bootstrap design system used)
 - Service workers
-- Using APIs and creating requests to external urls, urls validation performed with **_extractHostPath_** function in /src/client/js folder
+- Using APIs and creating requests to external urls, urls validation performed with **_extractHostPath_** function using a **Regex** in /src/client/js folder
 
 >## Cloning
 ``` 
