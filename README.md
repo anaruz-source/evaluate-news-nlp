@@ -55,7 +55,7 @@ A great step to take with your finished project would be to deploy it! Unfortuna
 > ## License
 [MIT License](https://opensource.org/licenses/MIT)
 
-> ## References
+>  ## References
 1. [Udacity frontend nanodegree program](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd0011)
 
 2. [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
@@ -70,5 +70,7 @@ A great step to take with your finished project would be to deploy it! Unfortuna
 7. [JQuery 3.5.1](https://code.jquery.com/jquery-3.5.1.js)
 
 10. [bootstrap docs](https://getbootstrap.com/docs/4.4/layout/overview/)
-10. [bootstrap concepts](https://webpack.js.org/concepts/)
+11. [bootstrap concepts](https://webpack.js.org/concepts/)
+12. [Netlify express](https://github.com/owenconti/netlify-express/blob/master/package.json)
+12. [Netlify express](https://www.youtube.com/watch?v=hQAu0YEIF0g)
 
